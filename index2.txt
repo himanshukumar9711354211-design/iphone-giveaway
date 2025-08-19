@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Win an iPhone 15 Pro Max — Giveaway</title>
+<style>
+:root{
+  --bg:#0f1115; --card:#151821; --text:#e8eaf1; --muted:#9aa3b2;
+  --primary:#3ddc84; --accent:#6aa2ff;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;}
+a{text-decoration:none;color:inherit;}
+header{background:rgba(15,17,21,0.9);padding:16px 0;position:sticky;top:0;z-index:10;border-bottom:1px solid #262a36;}
+.wrap{max-width:1000px;margin:0 auto;padding:0 16px;}
+.nav{display:flex;justify-content:space-between;align-items:center;}
+.brand{font-weight:700;font-size:20px;}
+.menu a{margin-left:16px;font-size:14px;opacity:.85;}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;padding:40px 0;}
+.card{background:var(--card);border-radius:16px;padding:24px;box-shadow:0 12px 30px rgba(0,0,0,.25);}
+h1{font-size:28px;margin-bottom:12px;}
+.sub{color:var(--muted);font-size:15px;margin-bottom:16px;}
+.cta{display:inline-block;padding:14px 20px;background:var(--primary);color:#0b0d12;font-weight:700;border-radius:12px;margin-top:16px;}
+.cta:hover{opacity:.9;}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:40px 0;}
+.feat{background:var(--card);padding:16px;border-radius:12px;text-align:center;}
+.img-card img{width:100%;border-radius:16px;}
+.timer{display:flex;gap:10px;margin-top:12px;}
+.pill{background:#10131a;border:1px solid #262a36;border-radius:12px;padding:10px 12px;text-align:center;min-width:60px;}
+.pill strong{display:block;font-size:18px;}
+.proof{display:grid;grid-template-columns:1.4fr .6fr;gap:16px;margin-bottom:40px;}
+.list{list-style:none;padding-left:0;margin:0;}
+.list li{display:flex;gap:10px;margin:10px 0;color:#cdd5e4;}
+.dot{width:8px;height:8px;background:var(--primary);border-radius:50%;margin-top:8px;}
+.note{font-size:13px;color:var(--muted);}
+footer{padding:20px 0;text-align:center;color:#a7b0c2;border-top:1px solid #262a36;font-size:12px;}
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr;gap:16px;}
+  .features{grid-template-columns:1fr;}
+  .proof{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">RewardSpot USA</div>
+    <nav class="menu">
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#terms">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="card">
+      <h1>Win an iPhone 15 Pro Max</h1>
+      <p class="sub">Enter our giveaway today! U.S. residents 18+ only. No purchase required.</p>
+      <a id="ctaButton" class="cta" href="#" target="_blank">Claim Your Entry</a>
+      <div class="timer" id="timer">
+        <div class="pill"><strong id="tH">00</strong>Hours</div>
+        <div class="pill"><strong id="tM">00</strong>Minutes</div>
+        <div class="pill"><strong id="tS">00</strong>Seconds</div>
+      </div>
+    </div>
+    <div class="card img-card">
+      <img src="https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iPhone-15-Pro_lineup_230912_big.jpg.large.jpg" alt="iPhone 15 Pro Max">
+    </div>
+  </section>
+
+  <section class="features" id="how">
+    <div class="feat">
+      <h3>1) Enter</h3>
+      <p>Click "Claim Your Entry" and confirm your email.</p>
+    </div>
+    <div class="feat">
+      <h3>2) Complete</h3>
+      <p>Finish a brief survey to validate your entry.</p>
+    </div>
+    <div class="feat">
+      <h3>3) Get Notified</h3>
+      <p>Winners are contacted via email within 48 hours.</p>
+    </div>
+  </section>
+
+  <section class="proof">
+    <div class="card">
+      <h3>Why people trust this promotion</h3>
+      <ul class="list">
+        <li><span class="dot"></span>No credit card required.</li>
+        <li><span class="dot"></span>Transparent process.</li>
+        <li><span class="dot"></span>Entries sent directly to partner.</li>
+      </ul>
+      <p class="note">Apple is not affiliated with this giveaway.</p>
+    </div>
+    <div class="card">
+      <h3>Live activity</h3>
+      <p class="note" id="count">782 entries submitted</p>
+    </div>
+  </section>
+
+  <section class="card" id="faq">
+    <h3>FAQ</h3>
+    <p><strong>Is this legit?</strong> Yes, no purchase required.</p>
+    <p><strong>Do I need a credit card?</strong> No, optional trials only.</p>
+    <p><strong>How are winners chosen?</strong> Randomly by partner.</p>
+  </section>
+</main>
+
+<footer>
+  © 2025 RewardSpot USA. All rights reserved.
+</footer>
+
+<script>
+  // Device detection & CTA redirect
+  const cta = document.getElementById('ctaButton');
+  const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+  if (/android/i.test(ua)) {
+    cta.href = "https://singingfiles.com/show.php?l=0&u=2416030&id=70869"; // Android
+  } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+    cta.href = "https://singingfiles.com/show.php?l=0&u=2416030&id=70870"; // iOS
+  } else {
+    cta.href = "https://singingfiles.com/show.php?l=0&u=2416030&id=67666"; // Desktop
+  }
+
+  // Countdown Timer
+  function updateTimer(){
+    const now = new Date();
+    const end = new Date(); end.setHours(23,59,59,999);
+    const diff = Math.max(0, end - now);
+    const h = String(Math.floor(diff/3.6e6)).padStart(2,'0');
+    const m = String(Math.floor(diff%3.6e6/6e4)).padStart(2,'0');
+    const s = String(Math.floor(diff%6e4/1e3)).padStart(2,'0');
+    document.getElementById('tH').textContent = h;
+    document.getElementById('tM').textContent = m;
+    document.getElementById('tS').textContent = s;
+  }
+  setInterval(updateTimer,1000);
+  updateTimer();
+
+  // Live Entry Counter
+  function updateLive(){
+    const base = 700 + Math.floor(Math.random()*200);
+    document.getElementById('count').textContent = base + ' entries submitted';
+  }
+  setInterval(updateLive,5000);
+  updateLive();
+</script>
+
+</body>
+</html>
